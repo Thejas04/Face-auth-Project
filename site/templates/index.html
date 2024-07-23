@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* CSS styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        nav a:hover{
+            color:red;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .hero {
+            background-image: url('https://th.bing.com/th/id/OIP.X7r6x8bYc3PT5Pza9SpfOAHaCZ?w=1920&h=623&rs=1&pid=ImgDetMain');
+            background-size: cover;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+        .types-of-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .types-of-images img {
+            width: 230px;
+            height: 230px;
+            margin: 10px;
+        }
+        .blog-post {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .blog-post img{
+            width:330px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Booking through face App</h1>
+    </header>
+    <nav>
+        <a href="/register-face">user login</a>
+        <a href="/available-users">business login</a>
+    </nav>
+    <div class="hero">
+        <h2>Welcome to the Recognition App</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="types-of-images">
+        <h3>Uses of the Application</h2><hr>
+        <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Image 1">
+        <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2">
+        <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Image 3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestiae iusto facere est excepturi! Vitae eveniet nostrum sapiente porro</p>
+    </div>
+    <div class="blog-post">
+        <h2>Latest Blog Post</h2>
+        <img src="{{ url_for('static', filename='images/image5.jpg') }}" alt="Image 1">
+        <p>Identity Theft using Face Recognition - One in A Billion Risk! After a gentle persuasion, ChatGPT agrees: Identity Theft using Facial Recognition is NOT a Realistic Scenario! And using Face Recognition Software is not as risky as most people think.</p>
+        <hr>
+        <img src="{{ url_for('static', filename='images/image6.jpg') }}" alt="Image 1">
+        <p>The Future of Facial Recognition Software- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores quisquam est mollitia sunt placeat dignissimos illum corrupti consequatur fugit expedita molestias deleniti aut.</p>
+    </div>
+        <footer>
+            <p>&copy; 2024 Face ID Application</p>
+        </footer>
+    </body>
+    </html>

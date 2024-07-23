@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Face</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        nav a:hover{
+            color:red;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        main {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #007bff;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Styling for booking catalog */
+        .booking-item {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .booking-item img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .booking-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Face ID</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>.
+        ..u7
+        <a href="/available-users">Available Users</a>
+    </nav>
+    
+    <main>
+        <h2>Upload an Image</h2>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <input type="submit" value="Upload">
+        </form>
+    </main>
+
+    <!-- Booking catalog -->
+   
+    
+    <footer>
+        &copy; 2024 Face ID Application
+    </footer>
+</body>
+</html>

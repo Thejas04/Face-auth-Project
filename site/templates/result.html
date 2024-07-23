@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        nav a:hover{
+            color:red;
+            background-color: aquamarine;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        main {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #007bff;
+        }
+        
+        img {
+            max-width: 20%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #333;
+        }
+        
+        .confirmation-message {
+            display: none; /* Initially hide the confirmation message */
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Result</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register-face">Register Face</a>
+        <a href="/available-users">Available Users</a>
+    </nav>
+    
+    <main>
+        <h2>Processed Image</h2>
+        <img class="disp_img" src="{{ url_for('static', filename=image_path) }}" alt="Processed Image">
+        <p>Face ID: {{ image_id }}</p>
+
+        <section>
+            <h2>Booking Catalog</h2>
+            <div class="booking-item">
+                <button class="booking-button" onclick="showConfirmation('hotel novotel');">Book hotel novotel Now</button>
+            </div>
+            <div class="booking-item">
+                <button class="booking-button" onclick="showConfirmation('Hilton Worldwide');">Book Hilton Worldwide Now</button>
+            </div>
+            <!-- Add more booking items as needed -->
+        </section>
+
+        <!-- Confirmation message -->
+        <p id="confirmation-message" class="confirmation-message">Your booking has been confirmed. Thank you!</p>
+    </main>
+
+    <footer>
+        &copy; 2024 Face ID Application
+    </footer>
+
+    <script>
+        function showConfirmation(hotelName) {
+            var confirmationMessage = document.getElementById('confirmation-message');
+            confirmationMessage.style.display = 'block'; // Show the confirmation message
+            confirmationMessage.innerText = `Your booking at ${hotelName} has been confirmed. Thank you!`;
+        }
+    </script>
+</body>
+</html>
